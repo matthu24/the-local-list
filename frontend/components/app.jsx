@@ -4,7 +4,6 @@ import Cities from './cities/cities_container';
 
 const App = () => (
   <div>
-    hello from App
     <Cities/>
   </div>
 );

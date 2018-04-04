@@ -6,7 +6,7 @@ class CreateCities < ActiveRecord::Migration[5.1]
       t.float :lng
       t.string :image_url_one
       t.string :image_url_two
-
+      t.string :tagline
       t.timestamps
     end
   end

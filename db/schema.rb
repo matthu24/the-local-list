@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20180327052517) do
     t.float "lng"
     t.string "image_url_one"
     t.string "image_url_two"
+    t.string "tagline"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

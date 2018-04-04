@@ -1,3 +1,25 @@
 // Place all the styles related to the cities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.city-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.city-image{
+  height: 300px;
+  width: 400px;
+  border: 6px solid lightblue;
+  border-bottom: none;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+}
+
+.city-tag{
+  font-style: italic;
+  color: darkgray;
+}
