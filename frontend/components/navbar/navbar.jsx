@@ -10,12 +10,12 @@ class NavBar extends React.Component{
       <div className='nav-bar'>
         <div className='nav-right'>
           <div className= 'logo'>The Local List</div>
-          <div className= 'top-10'>Top 10<i className="fas fa-trophy"></i></div>
-          <div className= 'overflow'>Overflow<i class="fas fa-tint"></i></div>
-          <div className='favorites'>Favorites<i class="fas fa-heart"></i></div>
+          <div className= 'top-10'><i className="fas fa-trophy"></i>Top 10</div>
+          <div className= 'overflow'><i class="fas fa-tint"></i>Overflow</div>
+          <div className='favorites'><i class="fas fa-heart"></i>Favorites</div>
 
         </div>
-        <input className = 'search' placeholder = 'search'/>
+        <input className = 'search' placeholder = 'Coffee, Food, or Bar'/>
       </div>
     )
   }
