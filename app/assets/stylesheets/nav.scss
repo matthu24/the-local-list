@@ -1,0 +1,17 @@
+.nav-bar{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  color: white;
+  background: linear-gradient(to right, lightblue , darkblue);
+  height: 80px;
+  margin-bottom: 40px;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search{
+  width: 250px;
+  height: 30px;
+}

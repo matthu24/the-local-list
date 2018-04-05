@@ -43,6 +43,7 @@ class US_map extends React.Component{
       map: this.map,
       title: city.name
       });
+
       markers.push(marker)
     })
     console.log(markers)
