@@ -5,7 +5,8 @@ const mapOptions = {
     lat: 38.2876084,
     lng: -94.6806535
   }, // San Francisco coords
-  zoom: 4
+  zoom: 3.8,
+  mapTypeId: 'terrain'
 };
 
 const SanFran = {
