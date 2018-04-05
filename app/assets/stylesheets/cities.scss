@@ -6,6 +6,7 @@
   flex-direction: row;
   // border: 1px solid red;
   flex-wrap:wrap;
+  // border: 1px solid black;
   justify-content: space-around;
   align-items: center;
   margin-right: 35px;
@@ -13,13 +14,16 @@
 }
 
 .city-item{
-  margin-top: 7%;
+  margin-top: 10vmin;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 350px;
-  width: 350px;
+  // height: 350px;
+  // width: 350px;
+  height: 42vmin;
+  width: 42vmin;
+  // width: 30%;
   background-color: #f2f2f2;
 }
 
@@ -30,8 +34,10 @@
 }
 
 .city-image{
-  height: 270px;
-  width: 350px;
+  // height: 270px;
+  // width: 350px;
+  height: 33vmin;
+  width: 42vmin;
   border: 6px solid lightblue;
   border-bottom: none;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
