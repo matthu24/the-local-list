@@ -5,7 +5,7 @@ const mapOptions = {
     lat: 38.2876084,
     lng: -94.6806535
   }, // San Francisco coords
-  zoom: 3.8,
+  zoom: 3.4,
   mapTypeId: 'terrain'
 };
 
@@ -49,7 +49,12 @@ class US_map extends React.Component{
     })
     console.log(markers)
     return(
-      <div id='map-container'></div>
+      <div className='splash'>
+        <div className = 'splash-left'><span className='header'>The Local</span> List is the list you wished you had the last time you visited Seattle or New York.  It features local favorites for coffee shops, restuarants, and bars for nine of the United States' greatest cities. But these recommendations aren't necessarily here to stay..Make your own and vote away!
+        </div>
+        <div id='map-container'></div>
+
+      </div>
 
     )
   }
