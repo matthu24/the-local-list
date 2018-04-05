@@ -8,7 +8,15 @@ class NavBar extends React.Component{
   render(){
     return(
       <div className='nav-bar'>
-        <div className= 'logo'>The Local List</div>
+        <div className='nav-right'>
+          <div className= 'logo'>The Local List<i className="fas fa-trophy"></i>
+
+</div>
+          <div className= 'top-10'>Top 10</div>
+          <div className= 'overflow'>Overflow</div>
+          <div className='favorites'>Favorites</div>
+
+        </div>
         <input className = 'search' placeholder = 'search'/>
       </div>
     )

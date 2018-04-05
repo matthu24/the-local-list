@@ -1,14 +1,39 @@
 .nav-bar{
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 30px;
-  color: white;
-  background: linear-gradient(to right, lightblue , darkblue);
+  top: 0;
+  background: linear-gradient(to right, lightgreen , darkblue);
   height: 80px;
   margin-bottom: 40px;
   display:flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  position:fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.logo{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  color: white;
+  margin-right: 30px;
+}
+.top-10{
+  margin-right: 20px;
+}
+.overflow{
+  margin-right: 20px;
+
+}
+.nav-right{
+  font-family: 'Josefin Sans', sans-serif;
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+
+  font-size: 22px;
+  color: black;
+
 }
 
 .search{
