@@ -12,7 +12,7 @@ class CityMap extends React.Component{
           lat: this.props.lat,
           lng: this.props.lng
         }, // San Francisco coords
-        zoom: 11,
+        zoom: 10,
         mapTypeId: 'terrain'
       });
   }
