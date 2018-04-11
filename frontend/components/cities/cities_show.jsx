@@ -21,10 +21,19 @@ class CitiesShow extends React.Component{
       <div className='city-show'>
         <div className='city-show-name'>{this.props.city.name}</div>
         <CityMap className='city-map' lat={this.props.city.lat} lng={this.props.city.lng}/>
+          <ul className='business-index'>
+            {
+              this.props.businesses.map(business => <li>{business.name}</li>)
+            }
+          </ul>
       </div>
     )
   }
-  
+
 }
 
 export default CitiesShow;
+
+
+//
+//
