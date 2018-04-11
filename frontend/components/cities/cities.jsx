@@ -9,7 +9,6 @@ class Cities extends React.Component{
   }
   componentDidMount(){
     this.props.fetchAllCities();
-
   }
 
   render(){

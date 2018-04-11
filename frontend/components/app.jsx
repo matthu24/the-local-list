@@ -4,7 +4,7 @@ import Cities from './cities/cities_container';
 import USMap from './maps/US_map_container';
 import NavBar from './navbar/navbar';
 import Footer from './footer/footer';
-import CitiesShow from './cities/cities_show';
+import CitiesShow from './cities/cities_show_container';
 
 const App = () => (
   <div>
