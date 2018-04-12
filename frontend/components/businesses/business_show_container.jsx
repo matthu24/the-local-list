@@ -10,9 +10,7 @@ const mapStateToProps = (state,ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchSingleBusiness: (id) => dispatch(fetchSingleBusiness(id)),
-  fetchSingleCity: (id) => dispatch(fetchSingleCity(id))
-
+  fetchSingleBusiness: (id) => dispatch(fetchSingleBusiness(id))
 });
 
 

@@ -9,8 +9,7 @@ class CitiesShow extends React.Component{
 
   componentDidMount(){
     console.log(this.props.match)
-    //when we first navigate to city show, the single city is accessed through ownProps
-    //but if we refresh the page, we need this action creator in componentDidMount to access the city again
+
     this.props.fetchSingleCity(this.props.match.params.cityId)
   }
 

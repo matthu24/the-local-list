@@ -35,5 +35,22 @@
 }
 
 .business-show{
-  margin-top:300px;
+  // border: 1px solid black;
+
+  margin-top:130px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.business-image{
+  // border: 1px solid black;
+  height: 400px;
+  width: 800px;
+  margin-bottom: 30px;
+}
+
+.business-name{
+  font-size: 30px;
 }
