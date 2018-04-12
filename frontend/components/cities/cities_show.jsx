@@ -1,5 +1,6 @@
 import React from 'react';
 import CityMap from '../maps/city_map';
+import BusinessIndexItem from '../businesses/business_index_item';
 
 class CitiesShow extends React.Component{
   constructor(props){
@@ -19,11 +20,12 @@ class CitiesShow extends React.Component{
     }
     return(
       <div className='city-show'>
-        <div className='city-show-name'>{this.props.city.name}</div>
         <CityMap className='city-map' lat={this.props.city.lat} lng={this.props.city.lng}/>
+
+        <div className='city-show-name'>The {this.props.city.name} List</div>
           <ul className='business-index'>
             {
-              this.props.businesses.map(business => <li>{business.name}</li>)
+              this.props.businesses.map((business,id) => <BusinessIndexItem key={id} business={business}/>)
             }
           </ul>
       </div>
@@ -33,7 +35,3 @@ class CitiesShow extends React.Component{
 }
 
 export default CitiesShow;
-
-
-//
-//

@@ -20,3 +20,10 @@
 //   }
 // });
 // }
+
+export const fetchBusiness = (id) => {
+  return $.ajax({
+    method: 'GET',
+    url: ` /api/businesses/${id}`
+  })
+}

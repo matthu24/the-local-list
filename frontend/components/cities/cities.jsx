@@ -9,6 +9,7 @@ class Cities extends React.Component{
   }
   componentDidMount(){
     this.props.fetchAllCities();
+    console.log(this.props.match);
   }
 
   render(){
