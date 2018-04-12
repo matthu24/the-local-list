@@ -26,6 +26,15 @@ class BusinessShow extends React.Component{
         <div className='business-name'>
           {this.props.business.name}
         </div>
+        <div>
+          address, hours, phone number, reservation
+        </div>
+        <div>
+          map and two photos
+        </div>
+        <div>
+          number of likes, review form + reviews 
+        </div>
 
         <div className='back' onClick={this.goBack}>back</div>
       </div>

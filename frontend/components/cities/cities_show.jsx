@@ -8,7 +8,7 @@ class CitiesShow extends React.Component{
   }
 
   componentDidMount(){
-    console.log(this.props.match)
+    console.log(this.props)
 
     this.props.fetchSingleCity(this.props.match.params.cityId)
   }
