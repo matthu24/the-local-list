@@ -19,7 +19,7 @@ class CitiesShow extends React.Component{
     }
     return(
       <div className='city-show'>
-        <CityMap className='city-map' lat={this.props.city.lat} lng={this.props.city.lng}/>
+        <CityMap className='city-map' businesses={this.props.businesses} lat={this.props.city.lat} lng={this.props.city.lng}/>
 
         <div className='city-show-name'>The {this.props.city.name} List</div>
         <div className='business-index'>

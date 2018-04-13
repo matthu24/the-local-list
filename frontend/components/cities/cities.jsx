@@ -14,7 +14,7 @@ class Cities extends React.Component{
 
   render(){
     return(
-      <div>
+      <div className='city-index-container'>
         <ul className = 'city-index'>
           {
             this.props.cities.map((city,id) => <CitiesIndexItem key={id} city={city}/>)
