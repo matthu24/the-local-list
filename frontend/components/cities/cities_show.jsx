@@ -22,11 +22,18 @@ class CitiesShow extends React.Component{
         <CityMap className='city-map' lat={this.props.city.lat} lng={this.props.city.lng}/>
 
         <div className='city-show-name'>The {this.props.city.name} List</div>
-          <ul className='business-index'>
+        <div className='business-index'>
+          <ul className='business-index-left'>
             {
-              this.props.businesses.map((business,id) => <BusinessIndexItem key={id} business={business}/>)
+              this.props.businesses.slice(0,5).map((business,id) => <BusinessIndexItem key={id} business={business}/>)
             }
           </ul>
+          <ul className='business-index-right'>
+            {
+              this.props.businesses.slice(5,10).map((business,id) => <BusinessIndexItem key={id} business={business}/>)
+            }
+          </ul>
+        </div>
       </div>
     )
   }
