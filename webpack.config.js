@@ -21,11 +21,10 @@ var prodPlugins = [
   })
 ];
 
-// plugins = plugins.concat(
-//   process.env.NODE_ENV === 'production' ? prodPlugins : devPlugins
-// );
+plugins = plugins.concat(
+  process.env.NODE_ENV === 'production' ? prodPlugins : devPlugins
+);
 
-plugins = plugins.concat(prodPlugins)
 
 module.exports = {
   entry: './frontend/entry.jsx',
