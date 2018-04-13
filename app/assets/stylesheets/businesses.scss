@@ -6,16 +6,22 @@
 
 
 .business-index-item{
-  margin: 40px;
-  margin-left: 10px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-left: 5px;
   margin-right: 5px;
   border-bottom:1px solid lightgray;
   display:flex;
   flex-direction: row;
   align-items: center;
   // border: 1px solid black;
-  width: 500px;
+  width: 480px;
 
+}
+
+.business-index-right{
+  // border: 1px solid black;
+  margin-left: -5px;
 }
 
 .business-index{
@@ -23,6 +29,7 @@
   width: 700px;
   display:flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .business-item-image{
