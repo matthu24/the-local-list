@@ -21,7 +21,7 @@ class CitiesShow extends React.Component{
       <div className='city-show'>
         <CityMap className='city-map' businesses={this.props.businesses} lat={this.props.city.lat} lng={this.props.city.lng}/>
 
-        <div className='city-show-name'>The {this.props.city.name} List</div>
+        <div className='city-show-name'><img className='left-wing' src='https://s3.us-east-2.amazonaws.com/thelocallist/leftWing.png'/>  The {this.props.city.name} List <img className='left-wing' src='https://s3.us-east-2.amazonaws.com/thelocallist/rightWing.png'/></div>
         <div className='business-index'>
           <ul className='business-index-left'>
             {
