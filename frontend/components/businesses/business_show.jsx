@@ -1,4 +1,5 @@
 import React from 'react';
+import Slider from 'react-slick';
 
 class BusinessShow extends React.Component{
   constructor(props){
@@ -17,6 +18,17 @@ class BusinessShow extends React.Component{
   }
 
   render(){
+    let settings = {
+     dots: true,
+     arrows: true,
+     infinite: true,
+     speed: 500,
+     slidesToShow: 3,
+     slidesToScroll: 1,
+     autoplaySpeed: 5000,
+     autoplay:true
+
+   };
     if(!this.props.business){
       return null;
     }
@@ -47,7 +59,7 @@ class BusinessShow extends React.Component{
       }
     }).join(" ")
 
-    let reservation = this.props.business.reservation ? 'true' : 'false';
+    let reservation = this.props.business.reservation ? 'yes' : 'no';
 
 
 
@@ -57,21 +69,56 @@ class BusinessShow extends React.Component{
         <div className='business-name'>
           {this.props.business.name}
         </div>
-        <div className='business-hours'>
-          {hours.split('!').map((line,id) => <div key={id}>{line}</div>)}
-        </div>
-        <div className='business-address'>
-          {address.split('!').map((line,id) => <div key={id}>{line}</div>)}
-        </div>
-        <div className='business-number'>
-          {this.props.business.phoneNumber}
-        </div>
-        <div className='business-number'>
-          reservations: {reservation}
-        </div>
+        <Slider {...settings}>
+  <div>
+    <img className='slider-1' src='https://s3.us-east-2.amazonaws.com/thelocallist/seattle1.png'/>
+  </div>
+  <div>
+    <img className='slider-2' src='https://s3.us-east-2.amazonaws.com/thelocallist/Portland1.png'/>
+  </div>
+  <div>
+    <img className='slider-3' src='https://s3.us-east-2.amazonaws.com/thelocallist/Chicago1.png'/>
+  </div>
+  <div>
+    <img className='slider-4' src='https://s3.us-east-2.amazonaws.com/thelocallist/Boston1.png'/>
+  </div>
+  <div>
+    <img className='slider-3' src='https://s3.us-east-2.amazonaws.com/thelocallist/philadelphia1.png'/>
+  </div>
+  <div>
+    <img className='slider-3' src='https://s3.us-east-2.amazonaws.com/thelocallist/Chicago1.png'/>
+  </div>
+</Slider>
 
+
+        <div className='business-text'>
+          <div className='business-text-left'>
+            <div className='business-hours'>
+              <h3>Hours</h3>
+              {hours.split('!').map((line,id) => <div key={id}>{line}</div>)}
+            </div>
+            <div className='business-address'>
+              <h3>Address</h3>
+              {address.split('!').map((line,id) => <div key={id}>{line}</div>)}
+            </div>
+            <div className='business-number'>
+              <h3>Phone</h3>
+              {this.props.business.phoneNumber}
+            </div>
+            <div className='business-reservation'>
+              {reservation} reservations
+            </div>
+            <div className='business-description'>
+              <h3>Introduction</h3>
+              {this.props.business.description}
+            </div>
+          </div>
+
+
+
+        </div>
         <div>
-          map and two photos
+          map and two photos, youtube video
         </div>
         <div>
           number of likes, review form + reviews
