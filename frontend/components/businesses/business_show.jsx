@@ -26,7 +26,8 @@ class BusinessShow extends React.Component{
      slidesToShow: 3,
      slidesToScroll: 1,
      autoplaySpeed: 5000,
-     autoplay:true
+     autoplay:true,
+     focusOnSelect:false
 
    };
     if(!this.props.business){
@@ -69,26 +70,28 @@ class BusinessShow extends React.Component{
         <div className='business-name'>
           {this.props.business.name}
         </div>
-        <Slider {...settings}>
-  <div>
-    <img className='slider-1' src='https://s3.us-east-2.amazonaws.com/thelocallist/seattle1.png'/>
-  </div>
-  <div>
-    <img className='slider-2' src='https://s3.us-east-2.amazonaws.com/thelocallist/Portland1.png'/>
-  </div>
-  <div>
-    <img className='slider-3' src='https://s3.us-east-2.amazonaws.com/thelocallist/Chicago1.png'/>
-  </div>
-  <div>
-    <img className='slider-4' src='https://s3.us-east-2.amazonaws.com/thelocallist/Boston1.png'/>
-  </div>
-  <div>
-    <img className='slider-3' src='https://s3.us-east-2.amazonaws.com/thelocallist/philadelphia1.png'/>
-  </div>
-  <div>
-    <img className='slider-3' src='https://s3.us-east-2.amazonaws.com/thelocallist/Chicago1.png'/>
-  </div>
-</Slider>
+        <div className='slider-container'>
+          <Slider {...settings}>
+            <div>
+              <img className='slider-1' src='https://s3.us-east-2.amazonaws.com/thelocallist/seattle1.png'/>
+            </div>
+            <div>
+              <img className='slider-2' src='https://s3.us-east-2.amazonaws.com/thelocallist/Portland1.png'/>
+            </div>
+            <div>
+              <img className='slider-3' src='https://s3.us-east-2.amazonaws.com/thelocallist/Chicago1.png'/>
+            </div>
+            <div>
+              <img className='slider-4' src='https://s3.us-east-2.amazonaws.com/thelocallist/Boston1.png'/>
+            </div>
+            <div>
+              <img className='slider-3' src='https://s3.us-east-2.amazonaws.com/thelocallist/philadelphia1.png'/>
+            </div>
+            <div>
+              <img className='slider-3' src='https://s3.us-east-2.amazonaws.com/thelocallist/Chicago1.png'/>
+            </div>
+          </Slider>
+        </div>
 
 
         <div className='business-text'>
