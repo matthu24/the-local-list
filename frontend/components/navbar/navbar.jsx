@@ -13,7 +13,7 @@ class NavBar extends React.Component{
         <div className= 'top-10'><i className="fas fa-trophy"></i>Top 10</div>
         <div className= 'overflow'><i className="fas fa-tint"></i>Overflow</div>
         <div className='favorites'><i className="fas fa-heart"></i>Favorites</div>
-        <div>Hi this.props.currentUser.username</div>
+        <div className='favorites'>Hi {this.props.currentUser.username}</div>
       </div>
     ) : (
       <div className='nav-right'>
@@ -21,7 +21,7 @@ class NavBar extends React.Component{
         <div className= 'top-10'><i className="fas fa-trophy"></i>Top 10</div>
         <div className= 'overflow'><i className="fas fa-tint"></i>Overflow</div>
         <div className='favorites'><i className="fas fa-heart"></i>Favorites</div>
-        <Link to={'/login'}><div>Login</div></Link>
+        <Link to={'/login'}><div className='login'><i className="fas fa-key"></i>Login</div></Link>
 
       </div>
     )

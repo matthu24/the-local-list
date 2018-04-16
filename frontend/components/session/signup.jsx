@@ -8,7 +8,7 @@ class Signup extends React.Component{
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillReceiveNewProps(nextProps){
+  componentWillReceiveProps(nextProps){
     if(nextProps.loggedIn){
       this.props.history.push('/');
     }
@@ -28,9 +28,9 @@ class Signup extends React.Component{
 
   render(){
     return(
-      <div>
+      <div className="signup-container">
         <form className="signup-form">
-          <h3>Sign up for a fan account</h3>
+          <h3>Sign up </h3>
           <label htmlFor="username">Username
             <input type="text" value={this.state.username} onChange={this.update("username")}/>
           </label>
@@ -49,3 +49,5 @@ class Signup extends React.Component{
 
 
 }
+
+export default Signup;

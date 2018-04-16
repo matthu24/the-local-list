@@ -11,7 +11,7 @@ class Login extends React.Component {
   //redirects the user to the splash page after logging in
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
-      this.props.history.push('/artist');
+      this.props.history.push('/');
     }
   }
 
@@ -52,7 +52,7 @@ class Login extends React.Component {
   }
 
     return(
-      <div>
+      <div className='login-container'>
 
         <form className="login-form">
           <h3>Log In</h3>

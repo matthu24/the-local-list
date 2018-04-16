@@ -4,7 +4,7 @@ import React from 'react';
 export const postUser = user => {
   return $.ajax({
     url: '/api/users',
-    method: 'GET',
+    method: 'POST',
     data: {user}
   });
 };

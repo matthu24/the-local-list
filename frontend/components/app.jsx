@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Cities from './cities/cities_container';
 import USMap from './maps/US_map_container';
-import NavBar from './navbar/navbar';
+import NavBar from './navbar/navbar_container';
 import Footer from './footer/footer';
 import CitiesShow from './cities/cities_show_container';
 import BusinessShow from './businesses/business_show_container';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import NavBar from './nav_bar';
+import NavBar from './navbar';
 import { logout, clearErrors } from '../../actions/session';
 
 //state.session essentially points to session reducer

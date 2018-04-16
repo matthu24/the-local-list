@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 City.destroy_all
 Business.destroy_all
+User.destroy_all
+
+u1 = User.create!(username: "Guest", password: 'password')
 
 c1 = City.create!(name: "Seattle", lat: 47.6272905, lng: -122.3640454, image_url_one: 'https://s3.us-east-2.amazonaws.com/thelocallist/seattle1.png', image_url_two: 'https://s3.us-east-2.amazonaws.com/thelocallist/seattle2.png', tagline: "The Emerald City")
 c2 = City.create!(name: "Portland", lat: 45.5435629, lng: -122.7948496, image_url_one: 'https://s3.us-east-2.amazonaws.com/thelocallist/Portland1.png', image_url_two: 'https://s3.us-east-2.amazonaws.com/thelocallist/seattle2.png', tagline: "The City of Roses")
