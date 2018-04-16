@@ -8,6 +8,7 @@ class BusinessShow extends React.Component{
   }
 
   componentDidMount(){
+     window.scrollTo(0, 0)
     this.props.fetchSingleBusiness(this.props.match.params.businessId)
     this.props.fetchAllCities();
   }

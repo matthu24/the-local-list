@@ -8,8 +8,7 @@ class CitiesShow extends React.Component{
   }
 
   componentDidMount(){
-    console.log(this.props)
-
+    window.scrollTo(0, 0)
     this.props.fetchSingleCity(this.props.match.params.cityId)
   }
 
