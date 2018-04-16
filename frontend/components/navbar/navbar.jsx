@@ -20,7 +20,6 @@ class NavBar extends React.Component{
         <Link to={'/'}><div className= 'logo'>The Local List</div></Link>
         <div className= 'top-10'><i className="fas fa-trophy"></i>Top 10</div>
         <div className= 'overflow'><i className="fas fa-tint"></i>Overflow</div>
-        <div className='favorites'><i className="fas fa-heart"></i>Favorites</div>
         <Link to={'/login'}><div className='login'><i className="fas fa-key"></i>Login</div></Link>
 
       </div>
