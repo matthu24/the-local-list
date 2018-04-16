@@ -6,12 +6,17 @@ import NavBar from './navbar/navbar';
 import Footer from './footer/footer';
 import CitiesShow from './cities/cities_show_container';
 import BusinessShow from './businesses/business_show_container';
+import LoginContainer from './session/login_container';
+import SignupContainer from './session/signup_container';
 
 const App = () => (
   <div>
     <Route path="/" component={NavBar} />
     <Route exact path="/" component={USMap}/>
     <Switch>
+      <Route path="/guest" component={LoginContainer} />
+      <Route path="/login" component={LoginContainer} />
+      <Route path="/signup" component={SignupContainer}/>
       <Route exact path="/" component={Cities}/>
       <Route exact path = "/cities/:cityId" component={CitiesShow}/>
       <Route exact path = "/businesses/:businessId" component={BusinessShow}/>
