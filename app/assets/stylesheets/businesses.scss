@@ -73,11 +73,14 @@ h3{
 
 .business-text{
   // border: 1px solid black;
-  width: 55%;
+  margin-top: 30px;
+
+  width: 250px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background-color: #f2f2f2;
 }
 
 .business-description{

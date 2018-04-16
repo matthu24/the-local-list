@@ -8,6 +8,12 @@ class CreateBusinesses < ActiveRecord::Migration[5.1]
       t.string :youTubeUrl
       t.string :imageFile1
       t.string :imageFile2
+      t.string :imageFile3
+      t.string :imageFile4
+      t.string :imageFile5
+      t.string :imageFile6
+      t.string :imageFile7
+      t.string :imageFile8
       t.string :description
       t.string :businessType
       t.string :address

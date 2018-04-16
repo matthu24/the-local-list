@@ -63,32 +63,40 @@ class BusinessShow extends React.Component{
     let reservation = this.props.business.reservation ? 'yes' : 'no';
 
 
+    let image3 = this.props.business.imageFile3;
+    let image4 = this.props.business.imageFile4;
+    let image5 = this.props.business.imageFile5;
+    let image6 = this.props.business.imageFile6;
+    let image7 = this.props.business.imageFile7;
+    let image8 = this.props.business.imageFile8;
+
+
 
     return(
       <div className='business-show'>
         <img className='business-image' src={imageFile}/>
-        <div className='business-name'>
+        <h2 className='business-name'>
           {this.props.business.name}
-        </div>
+        </h2>
         <div className='slider-container'>
           <Slider {...settings}>
             <div>
-              <img className='slider-1' src='https://s3.us-east-2.amazonaws.com/thelocallist/seattle1.png'/>
+              <img className='slider-1' src={image3}/>
             </div>
             <div>
-              <img className='slider-2' src='https://s3.us-east-2.amazonaws.com/thelocallist/Portland1.png'/>
+              <img className='slider-2' src={image4}/>
             </div>
             <div>
-              <img className='slider-3' src='https://s3.us-east-2.amazonaws.com/thelocallist/Chicago1.png'/>
+              <img className='slider-3' src={image5}/>
             </div>
             <div>
-              <img className='slider-4' src='https://s3.us-east-2.amazonaws.com/thelocallist/Boston1.png'/>
+              <img className='slider-4' src={image6}/>
             </div>
             <div>
-              <img className='slider-3' src='https://s3.us-east-2.amazonaws.com/thelocallist/philadelphia1.png'/>
+              <img className='slider-3' src={image7}/>
             </div>
             <div>
-              <img className='slider-3' src='https://s3.us-east-2.amazonaws.com/thelocallist/Chicago1.png'/>
+              <img className='slider-3' src={image8}/>
             </div>
           </Slider>
         </div>

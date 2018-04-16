@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411014203) do
+ActiveRecord::Schema.define(version: 20180416154618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,12 @@ ActiveRecord::Schema.define(version: 20180411014203) do
     t.string "youTubeUrl"
     t.string "imageFile1"
     t.string "imageFile2"
+    t.string "imageFile3"
+    t.string "imageFile4"
+    t.string "imageFile5"
+    t.string "imageFile6"
+    t.string "imageFile7"
+    t.string "imageFile8"
     t.string "description"
     t.string "businessType"
     t.string "address"
@@ -41,6 +47,15 @@ ActiveRecord::Schema.define(version: 20180411014203) do
     t.string "image_url_one"
     t.string "image_url_two"
     t.string "tagline"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username", null: false
+    t.string "password_digest"
+    t.string "session_token"
+    t.string "city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

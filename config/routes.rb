@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :businesses, only: [:index]
     end
     resources :businesses, only: [:show, :update,:index]
+    resources :users, only: [:create, :show, :update]
 
 
   end

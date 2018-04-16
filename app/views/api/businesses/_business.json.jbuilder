@@ -1,1 +1,1 @@
-json.extract! business, :id, :name, :lat, :lng, :youTubeUrl, :imageFile1, :imageFile2, :description, :businessType, :address, :hours, :phoneNumber, :reservation, :city_id, :overflow
+json.extract! business, :id, :name, :lat, :lng, :youTubeUrl, :imageFile1, :imageFile2, :imageFile3, :imageFile4, :imageFile5, :imageFile6, :imageFile7, :imageFile8, :description, :businessType, :address, :hours, :phoneNumber, :reservation, :city_id, :overflow
