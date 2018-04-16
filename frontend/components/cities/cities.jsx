@@ -8,8 +8,8 @@ class Cities extends React.Component{
     super(props);
   }
   componentDidMount(){
+     window.scrollTo(0, 0)
     this.props.fetchAllCities();
-    console.log(this.props.match);
   }
 
   render(){
