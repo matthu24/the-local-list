@@ -6,4 +6,5 @@ class Business < ApplicationRecord
   foreign_key: :city_id,
   primary_key: :id
 )
+has_many :reviews
 end
