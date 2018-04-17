@@ -41,9 +41,9 @@
 
 
 
-button{
-  color:red;
-}
+// button{
+//   color:red;
+// }
 
 .business-type{
   color:gray;
@@ -110,7 +110,7 @@ h3{
 
 
 .business-top-review{
-  width: 680px;
+  width: 630px;
   margin-bottom:30px;
 }
 .business-show-description-container{
@@ -126,6 +126,7 @@ h3{
   justify-content: center;
   align-items: center;
   background-color: #f2f2f2;
+  padding-bottom: 20px;
 }
 
 .business-description{
@@ -201,5 +202,5 @@ h3{
 
 .youtube-video{
   height: 400px;
-  width: 500px;
+  width: 600px;
 }
