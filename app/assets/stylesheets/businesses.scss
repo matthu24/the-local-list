@@ -9,12 +9,20 @@
 }
 
 
+.business-show-top{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
 button{
   color:red;
 }
 
-
+.business-type{
+  margin-bottom: 30px;
+}
 
 .slick-list{
   width: 620px;
@@ -150,5 +158,6 @@ h3{
 }
 
 .business-name{
-  font-size: 30px;
+  font-size: 35px;
+  font-weight: bold;
 }

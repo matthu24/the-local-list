@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import BusinessMap from '../maps/business_map';
 
 class BusinessShow extends React.Component{
   constructor(props){
@@ -75,33 +76,38 @@ class BusinessShow extends React.Component{
 
     return(
       <div className='business-show'>
-        <img className='business-image' src={imageFile}/>
-        <h2 className='business-name'>
+        <div className='business-name'>
           {this.props.business.name}
-        </h2>
-        <div className='slider-container'>
-          <Slider {...settings}>
-            <div>
-              <img className='slider-1' src={image3}/>
-            </div>
-            <div>
-              <img className='slider-2' src={image4}/>
-            </div>
-            <div>
-              <img className='slider-3' src={image5}/>
-            </div>
-            <div>
-              <img className='slider-4' src={image6}/>
-            </div>
-            <div>
-              <img className='slider-3' src={image7}/>
-            </div>
-            <div>
-              <img className='slider-3' src={image8}/>
-            </div>
-          </Slider>
         </div>
+        <div className='business-type'>{this.props.business.businessType}</div>
 
+        <div className='business-show-top'>
+          <BusinessMap lat={this.props.business.lat} lng={this.props.business.lng}/>
+          <div className='slider-container'>
+            <Slider {...settings}>
+              <div>
+                <img className='slider-1' src={image3}/>
+              </div>
+              <div>
+                <img className='slider-2' src={image4}/>
+              </div>
+              <div>
+                <img className='slider-3' src={image5}/>
+              </div>
+              <div>
+                <img className='slider-4' src={image6}/>
+              </div>
+              <div>
+                <img className='slider-3' src={image7}/>
+              </div>
+              <div>
+                <img className='slider-3' src={image8}/>
+              </div>
+            </Slider>
+          </div>
+
+
+        </div>
 
         <div className='business-text'>
           <div className='business-text-left'>
