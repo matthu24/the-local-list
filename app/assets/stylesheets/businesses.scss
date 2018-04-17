@@ -16,12 +16,41 @@
   align-items: center;
 }
 
+.business-reviews{
+  // border: 1px solid black;
+
+  width: 980px;
+}
+
+
+.business-show-mid{
+  width: 1100px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  // border: 1px solid black;
+}
+
+.business-show-mid-left{
+  // display:flex;
+  // flex-direction: column;
+  // align-items: center;
+  // border: 1px solid black;
+}
+
+
+
 button{
   color:red;
 }
 
 .business-type{
-  margin-bottom: 30px;
+  color:gray;
+}
+
+.business-likes{
+  font-size: 20px;
 }
 
 .slick-list{
@@ -79,6 +108,14 @@ h3{
   color:lightblue;
 }
 
+
+.business-top-review{
+  width: 680px;
+  margin-bottom:30px;
+}
+.business-show-description-container{
+  width: 600px;
+}
 .business-text{
   // border: 1px solid black;
   margin-top: 30px;
@@ -86,7 +123,7 @@ h3{
   width: 250px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-color: #f2f2f2;
 }
@@ -160,4 +197,9 @@ h3{
 .business-name{
   font-size: 35px;
   font-weight: bold;
+}
+
+.youtube-video{
+  height: 400px;
+  width: 500px;
 }

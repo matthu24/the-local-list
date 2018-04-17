@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import BusinessMap from '../maps/business_map';
+import Youtube from './youtube';
 
 class BusinessShow extends React.Component{
   constructor(props){
@@ -75,11 +76,14 @@ class BusinessShow extends React.Component{
 
 
     return(
+
       <div className='business-show'>
         <div className='business-name'>
           {this.props.business.name}
         </div>
         <div className='business-type'>{this.props.business.businessType}</div>
+        <div className='business-likes'>20 <i className="far fa-heart"></i></div>
+          <div className='back' onClick={this.goBack}>back</div>
 
         <div className='business-show-top'>
           <BusinessMap lat={this.props.business.lat} lng={this.props.business.lng}/>
@@ -105,45 +109,59 @@ class BusinessShow extends React.Component{
               </div>
             </Slider>
           </div>
-
-
         </div>
 
-        <div className='business-text'>
-          <div className='business-text-left'>
-            <div className='business-hours'>
-              <h3>Hours</h3>
-              {hours.split('!').map((line,id) => <div key={id}>{line}</div>)}
-            </div>
-            <div className='business-address'>
-              <h3>Address</h3>
-              {address.split('!').map((line,id) => <div key={id}>{line}</div>)}
-            </div>
-            <div className='business-number'>
-              <h3>Phone</h3>
-              {this.props.business.phoneNumber}
-            </div>
-            <div className='business-reservation'>
-              {reservation} reservations
-            </div>
-            <div className='business-description'>
-              <h3>Introduction</h3>
+        <div className='business-show-mid'>
+
+          <div className='business-show-mid-left'>
+            <div className='business-show-description-container'>
+
+              <h2>Top Review</h2>
+              <div className='business-top-review'>
               {this.props.business.description}
+              {this.props.business.description}
+              </div>
             </div>
+
+            <Youtube business={this.props.business.name}/>
           </div>
 
-
+          <div className='business-text'>
+              <div className='business-text-left'>
+                <div className='business-hours'>
+                  <h3>Hours</h3>
+                  {hours.split('!').map((line,id) => <div key={id}>{line}</div>)}
+                </div>
+                <div className='business-address'>
+                  <h3>Address</h3>
+                  {address.split('!').map((line,id) => <div key={id}>{line}</div>)}
+                </div>
+                <div className='business-number'>
+                  <h3>Phone</h3>
+                  {this.props.business.phoneNumber}
+                </div>
+                <div className='business-reservation'>
+                  {reservation} reservations
+                </div>
+                <div className='business-description'>
+                  <h3>Introduction</h3>
+                  {this.props.business.description}
+                </div>
+              </div>
+            </div>
 
         </div>
-        <div>
-          map and two photos, youtube video
-        </div>
-        <div>
-          number of likes, review form + reviews
+
+        <div className='business-reviews'>
+          <h1>
+            Reviews
+          </h1>
         </div>
 
-        <div className='back' onClick={this.goBack}>back</div>
       </div>
+
+
+
     )
   }
 }
