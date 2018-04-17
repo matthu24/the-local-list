@@ -11,6 +11,7 @@ User.destroy_all
 
 u1 = User.create!(username: "Guest", password: 'password')
 
+
 c1 = City.create!(name: "Seattle", lat: 47.6272905, lng: -122.3640454, image_url_one: 'https://s3.us-east-2.amazonaws.com/thelocallist/seattle1.png', image_url_two: 'https://s3.us-east-2.amazonaws.com/thelocallist/seattle2.png', tagline: "The Emerald City")
 c2 = City.create!(name: "Portland", lat: 45.5435629, lng: -122.7948496, image_url_one: 'https://s3.us-east-2.amazonaws.com/thelocallist/Portland1.png', image_url_two: 'https://s3.us-east-2.amazonaws.com/thelocallist/seattle2.png', tagline: "The City of Roses")
 c3 = City.create!(name: "San Francisco", lat: 37.7578149, lng: -122.5078119, image_url_one: 'https://s3.us-east-2.amazonaws.com/thelocallist/san+francisco.png', image_url_two: 'https://s3.us-east-2.amazonaws.com/thelocallist/seattle2.png', tagline: "The Golden City")
@@ -34,3 +35,6 @@ b9 = Business.create!(city_id: c1.id,name: "Morsel", lat: 47.6646567, lng: -122.
 
 b11 = Business.create!(city_id: c2.id,name: "Voodoo Doughnuts", lat: 47.6677577, lng: -122.3672629, youTubeUrl: 'https://www.youtube.com/watch?v=C0hLdZ9ueT8', imageFile1: 'https://s3.us-east-2.amazonaws.com/thelocallist/stumptown1.png', imageFile2: 'a', description: 'a', businessType: 'coffee', address: 'a', hours: 'a', phoneNumber:'a', reservation:'false', overflow: false)
 b12 = Business.create!(city_id: c2.id,name: "Heart Coffee", lat: 47.6677577, lng: -122.3672629, youTubeUrl: 'https://www.youtube.com/watch?v=C0hLdZ9ueT8', imageFile1: 'https://s3.us-east-2.amazonaws.com/thelocallist/stumptown1.png', imageFile2: 'a', description: 'a', businessType: 'coffee', address: 'a', hours: 'a', phoneNumber:'a', reservation:'false', overflow: false)
+
+
+r1 = Review.create!(body: "Hands down the best coffee shop in Seattle.  The 8 oz espresso with milk made my cry one time.  Also highly recommend the deconstructed espresso with milk.  If you're lucky, you might also run into the neighborhood Slate cat!", recommended:true, user_id: u1.id, business_id: b1.id)
