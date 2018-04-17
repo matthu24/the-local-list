@@ -8,6 +8,7 @@
 City.destroy_all
 Business.destroy_all
 User.destroy_all
+Review.destroy_all
 
 u1 = User.create!(username: "Guest", password: 'password')
 

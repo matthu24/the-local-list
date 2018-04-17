@@ -6,7 +6,7 @@ class Video extends React.Component{
   constructor(props){
     super(props)
     this.state={video:''}
-    const search = this.props.business 
+    const business = this.props.business;
     YTSearch({key:API_KEY,term: business},(videos) => {
 
       //ES6 sugar videos: videos
