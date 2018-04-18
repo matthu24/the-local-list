@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20180417190043) do
     t.string "phoneNumber"
     t.boolean "reservation"
     t.boolean "overflow"
+    t.integer "like_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

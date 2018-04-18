@@ -21,6 +21,7 @@ class CreateBusinesses < ActiveRecord::Migration[5.1]
       t.string :phoneNumber
       t.boolean :reservation
       t.boolean :overflow
+      t.integer :like_count
       t.timestamps
     end
   end

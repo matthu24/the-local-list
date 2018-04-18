@@ -39,7 +39,7 @@
   align-items: center;
 
 }
-.favorites{
+.favorites, .logout{
   color: #f2f2f2;
   margin-right: 30px;
 
@@ -48,6 +48,23 @@
   justify-content: center;
   align-items: center;
 }
+
+.greeting{
+  color: #f2f2f2;
+  margin-right: 30px;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+}
+
+
+.logout:hover{
+  cursor:pointer;
+}
+
 .login{
   color: #f2f2f2;
   margin-right: 30px;
