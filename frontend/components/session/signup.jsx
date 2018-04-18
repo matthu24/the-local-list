@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 class Signup extends React.Component{
   constructor(props){
     super(props);
-    this.state = {username: '', password: ''};
+    this.state = {username: '',password:'', city:''};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -38,6 +38,10 @@ class Signup extends React.Component{
           <br/>
           <label htmlFor="password">Password
             <input type="password" value={this.state.password} onChange={this.update("password")}/>
+          </label>
+          <br/>
+          <label htmlFor="city">City
+            <input type="city" value={this.state.city} onChange={this.update("city")}/>
           </label>
 
           <br/>

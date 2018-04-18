@@ -40,6 +40,7 @@ class ReviewForm extends React.Component{
       <div className='review-form-container'>
         <form onSubmit={this.handleSubmit}>
           <h2>Write a Review</h2>
+      
           <textarea value={this.state.body} onChange={this.update('body')} placeholder='Thoughts, ideas, and meanderings...'/>
           <br></br>
             <select onChange={this.update('recommended')}>

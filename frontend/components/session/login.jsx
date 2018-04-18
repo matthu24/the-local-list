@@ -66,6 +66,7 @@ class Login extends React.Component {
             <input type="password" value={this.state.password} onChange={this.update("password")}/>
           </label>
 
+
           <br/>
           <button className="login-button" onClick={this.handleSubmit}>Log in</button>
           <Link to='/signup'className='alt-signup'>Or sign up!</Link>
