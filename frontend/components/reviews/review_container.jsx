@@ -5,6 +5,7 @@ import {fetchAllReviews} from '../../actions/review'
 
 const mapStateToProps = (state,{businessId}) => ({
   reviews: Object.values(state.entities.reviews),
+  currentUser: state.session.currentUser,
   businessId
 });
 

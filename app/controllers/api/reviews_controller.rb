@@ -6,7 +6,7 @@ class Api::ReviewsController < ApplicationController
 
 
   def create
-    @review = Review.new(review_params)
+    @review = current_user.reviews.new(review_params)
     @review.business_id = params[:business_id]
     if @review.save!
       render :show
@@ -17,7 +17,7 @@ class Api::ReviewsController < ApplicationController
 
 
   def destroy
-    @review = currentUser.reviews.find(params[:id])
+    @review = current_user.reviews.find(params[:id])
     @review.destroy
     render :show
   end

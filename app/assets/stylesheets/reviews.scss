@@ -7,6 +7,19 @@
   font-size: 15px;
 }
 
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+textarea{
+  resize:none;
+  width: 500px;
+  height: 150px;
+  box-shadow: none;
+  font-size: 17px;
+  border: 2px solid gray;
+}
+
 .review-item{
   width: 700px;
   padding-bottom: 30px;

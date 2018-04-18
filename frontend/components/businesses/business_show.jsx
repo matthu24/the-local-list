@@ -119,7 +119,7 @@ class BusinessShow extends React.Component{
 
 
                 <h3 className='review-author'>
-                  Obsessive Local-Lister
+                  Obsessive Local Lister
                   <div className='review-city'>San Francisco, CA</div>
 
                 </h3>
@@ -160,9 +160,7 @@ class BusinessShow extends React.Component{
         </div>
 
         <div className='business-reviews'>
-          <h1>
-            Reviews
-          </h1>
+        
           <Reviews businessId={this.props.business.id}/>
         </div>
 

@@ -8,7 +8,7 @@ export const fetchBusinessReviews = (businessId) => {
 export const createBusinessReview = (review, businessId) => {
   return $.ajax({
     method: 'POST',
-    url: `/api/businesses/businessId/reviews`,
+    url: `/api/businesses/${businessId}/reviews`,
     data: {review}
   })
 }
