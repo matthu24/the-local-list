@@ -1,3 +1,19 @@
 // Place all the styles related to the reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.review-city{
+  color:black;
+  font-size: 15px;
+}
+
+.review-item{
+  width: 700px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid gray;
+}
+
+.review-recommendation{
+  color:black;
+  font-size: 15px;
+}
