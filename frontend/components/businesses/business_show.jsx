@@ -117,7 +117,13 @@ class BusinessShow extends React.Component{
           <div className='business-show-mid-left'>
             <div className='business-show-description-container'>
 
-              <h2>Top Review</h2>
+
+                <h3 className='review-author'>
+                  Obsessive Local-Lister
+                  <div className='review-city'>San Francisco, CA</div>
+
+                </h3>
+
               <div className='business-top-review'>
               {this.props.business.description}
               {this.props.business.description}
