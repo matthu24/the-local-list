@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Reviews from './reviews';
-import {fetchAllReviews} from '../../actions/review'
+import {fetchAllReviews, deleteSingleReview} from '../../actions/review'
 
 const mapStateToProps = (state,{businessId}) => ({
   reviews: Object.values(state.entities.reviews),
@@ -10,7 +10,8 @@ const mapStateToProps = (state,{businessId}) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchAllReviews: (businessId) => dispatch(fetchAllReviews(businessId))
+  fetchAllReviews: (businessId) => dispatch(fetchAllReviews(businessId)),
+  deleteSingleReview: (reviewId) => dispatch(deleteSingleReview(reviewId))
 
 });
 

@@ -20,7 +20,7 @@ class Reviews extends React.Component{
       <div>
         {reviewForm}
           {
-            businessReviews.map((review,id) => <ReviewItem key={id} review = {review}/>)
+            businessReviews.map((review,id) => <ReviewItem key={id} review = {review} currentUser={this.props.currentUser} deleteReview={this.props.deleteSingleReview}/>)
           }
 
       </div>

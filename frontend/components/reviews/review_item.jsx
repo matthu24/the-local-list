@@ -6,6 +6,7 @@ export default props => {
   ) : (
     <i className="far fa-thumbs-down"></i>
   )
+  let deleteButton = props.currentUser ? (<button onClick={() => props.deleteReview(props.review.id)}>Delete</button>) : (<div></div>)
   return(
     <div className='review-item'>
       <h3 className='review-author'>
@@ -19,6 +20,7 @@ export default props => {
         {props.review.body}
 
       </div>
+      {deleteButton}
     </div>
   )
 }
