@@ -6,7 +6,7 @@ export default props => {
   ) : (
     <i className="far fa-thumbs-down"></i>
   )
-  let deleteButton = props.currentUser ? (<button onClick={() => props.deleteReview(props.review.id)}>Delete</button>) : (<div></div>)
+  let deleteButton = props.currentUser.id === props.review.user_id ? (<button onClick={() => props.deleteReview(props.review.id)}>Delete</button>) : (<div></div>)
   return(
     <div className='review-item'>
       <h3 className='review-author'>
