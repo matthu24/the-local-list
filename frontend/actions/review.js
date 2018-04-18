@@ -4,12 +4,12 @@ export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 
-const recieveReviews = reviews => ({
+const receiveReviews = reviews => ({
   type: RECEIVE_REVIEWS,
   reviews
 });
 
-const recieveReview = review => ({
+const receiveReview = review => ({
   type: RECEIVE_REVIEW,
   review
 });

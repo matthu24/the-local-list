@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import BusinessMap from '../maps/business_map';
 import Youtube from './youtube';
+import Reviews from '../reviews/review_container';
 
 class BusinessShow extends React.Component{
   constructor(props){
@@ -156,6 +157,7 @@ class BusinessShow extends React.Component{
           <h1>
             Reviews
           </h1>
+          <Reviews businessId={this.props.business.id}/>
         </div>
 
       </div>

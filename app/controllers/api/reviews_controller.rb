@@ -1,17 +1,17 @@
 class Api::ReviewsController < ApplicationController
 
   def index
-    @indexes = Review.all
+    @reviews = Review.all
   end
 
 
   def create
-    @index = Review.new(review_params)
-    @index.business_id = params[:business_id]
-    if @index.save!
+    @review = Review.new(review_params)
+    @review.business_id = params[:business_id]
+    if @review.save!
       render :show
     else
-      render json: @index.errors.full_messages, status: 401
+      render json: @review.errors.full_messages, status: 401
     end
   end
 
