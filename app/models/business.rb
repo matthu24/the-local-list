@@ -7,4 +7,5 @@ class Business < ApplicationRecord
   primary_key: :id
 )
 has_many :reviews
+has_many :likes 
 end

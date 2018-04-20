@@ -6,6 +6,7 @@ class User < ApplicationRecord
   attr_reader :password
 
   has_many :reviews
+  has_many :likes
   after_initialize :ensure_session_token
 
 
