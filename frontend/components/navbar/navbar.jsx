@@ -14,12 +14,8 @@ class NavBar extends React.Component{
         <div className= 'overflow'><i className="fas fa-tint"></i>Overflow</div>
         <div className='favorites'><i className="fas fa-heart"></i>Favorites</div>
         <div className='logout' onClick={() => {this.props.logout()}}><i className="fas fa-key"></i>Logout</div>
-        <div className='greeting'>
-          <div>
-            Hi,
-          </div>
-          {this.props.currentUser.username}
-        </div>
+          <div className='greeting'><i className="fas fa-handshake"></i>{this.props.currentUser.username}</div>
+
       </div>
     ) : (
       <div className='nav-right'>

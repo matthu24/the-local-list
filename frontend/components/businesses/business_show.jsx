@@ -80,10 +80,10 @@ class BusinessShow extends React.Component{
 
       <div className='business-show'>
         <div className='business-name'>
-          {this.props.business.name}
+          {this.props.business.name}<i className="far fa-heart"></i>
         </div>
         <div className='business-type'>{this.props.business.businessType}</div>
-        <div className='business-likes'>20 <i className="far fa-heart"></i></div>
+        <div className='business-likes'>{this.props.business.like_count} <i className="far fa-heart"></i></div>
           <div className='back' onClick={this.goBack}>back</div>
 
         <div className='business-show-top'>
@@ -160,7 +160,7 @@ class BusinessShow extends React.Component{
         </div>
 
         <div className='business-reviews'>
-        
+
           <Reviews businessId={this.props.business.id}/>
         </div>
 
