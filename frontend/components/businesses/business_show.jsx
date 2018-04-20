@@ -74,10 +74,7 @@ class BusinessShow extends React.Component{
     let image7 = this.props.business.imageFile7;
     let image8 = this.props.business.imageFile8;
 
-
-
     return(
-
       <div className='business-show'>
         <div className='business-name'>
           {this.props.business.name}<i className="far fa-heart"></i>
