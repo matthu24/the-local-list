@@ -8,14 +8,26 @@ class BusinessShow extends React.Component{
   constructor(props){
     super(props);
     this.goBack = this.goBack.bind(this);
+    //the liked status should come from the redux state: if the current user has a like object that matches this business id, liked should be true;
+    this.state = {liked:false}
+    this.changeLikeStatus = this.changeLikeStatus.bind(this);
   }
 
   componentDidMount(){
-     window.scrollTo(0, 0)
+    window.scrollTo(0, 0)
     this.props.fetchSingleBusiness(this.props.match.params.businessId)
     this.props.fetchAllCities();
   }
 
+  changeLikeStatus(){
+    let currentStatus = this.state.liked;
+    let changedStatus = currentStatus === false ? true : false;
+    this.setState({liked:changedStatus});
+
+    //also make a post or delete request for a like
+    //also update business.like_count: this might be a patch request to update like_count
+    //or we could just do away with like_count and count the number of nested likes for a given business every time 
+  }
 
   goBack(){
     this.props.history.goBack();
@@ -57,7 +69,6 @@ class BusinessShow extends React.Component{
     address = address.split(' ').map(word => {
       let city = word.slice(0,word.length-1)
       if(cities.includes(city)){
-        console.log('in here')
         return `!${word}`
       }else{
         return word
@@ -77,10 +88,10 @@ class BusinessShow extends React.Component{
     return(
       <div className='business-show'>
         <div className='business-name'>
-          {this.props.business.name}<i className="far fa-heart"></i>
+          {this.props.business.name}
         </div>
         <div className='business-type'>{this.props.business.businessType}</div>
-        <div className='business-likes'>{this.props.business.like_count} <i className="far fa-heart"></i></div>
+        <div className='business-likes'>{this.props.business.like_count} <span className={this.state.liked === true ? 'liked' : 'unliked'} onClick={() => this.changeLikeStatus()}><i className="far fa-heart"></i></span></div>
           <div className='back' onClick={this.goBack}>back</div>
 
         <div className='business-show-top'>

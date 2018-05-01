@@ -7,6 +7,7 @@ import { fetchAllCities } from '../../actions/city';
 
 
 const mapStateToProps = (state,ownProps) => ({
+  //current user 
   business: state.entities.businesses[ownProps.match.params.businessId],
   cities: state.entities.cities
 });
