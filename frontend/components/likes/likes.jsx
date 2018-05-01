@@ -22,6 +22,7 @@ export default props => {
   const createSingleLike = () => {
     //want createlike to be executed first!
     if(props.currentUser){
+      //i need to refetch my businesses to see a change in the frontend, because my likes are nested in business
       setTimeout(() => props.fetchBusiness(),100)
       createLike({user_id: props.currentUser.id, business_id: props.business.id});
     }

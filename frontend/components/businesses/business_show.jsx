@@ -11,24 +11,12 @@ class BusinessShow extends React.Component{
     super(props);
     this.goBack = this.goBack.bind(this);
     //the liked status should come from the redux state: if the current user has a like object that matches this business id, liked should be true;
-    this.state = {liked:false}
-    this.changeLikeStatus = this.changeLikeStatus.bind(this);
   }
 
   componentDidMount(){
     window.scrollTo(0, 0)
     this.props.fetchSingleBusiness(this.props.match.params.businessId)
     this.props.fetchAllCities();
-  }
-
-  changeLikeStatus(){
-    let currentStatus = this.state.liked;
-    let changedStatus = currentStatus === false ? true : false;
-    this.setState({liked:changedStatus});
-
-    //also make a post or delete request for a like
-    //also update business.like_count: this might be a patch request to update like_count
-    //or we could just do away with like_count and count the number of nested likes for a given business every time
   }
 
   goBack(){
@@ -94,7 +82,10 @@ class BusinessShow extends React.Component{
         </div>
         <div className='business-type'>{this.props.business.businessType}</div>
         <div className='business-likes'>
-                    <Likes fetchBusiness={() => this.props.fetchSingleBusiness(this.props.match.params.businessId)} business={this.props.business} likes={this.props.business.likes} currentUser={this.props.currentUser}/>
+            <Likes fetchBusiness={() => this.props.fetchSingleBusiness(this.props.match.params.businessId)}
+              business={this.props.business}
+              likes={this.props.business.likes}
+              currentUser={this.props.currentUser}/>
         </div>
           <div className='back' onClick={this.goBack}>back</div>
 
@@ -172,7 +163,6 @@ class BusinessShow extends React.Component{
         </div>
 
         <div className='business-reviews'>
-
           <Reviews businessId={this.props.business.id}/>
         </div>
 
