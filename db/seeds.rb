@@ -9,6 +9,7 @@ City.destroy_all
 Business.destroy_all
 User.destroy_all
 Review.destroy_all
+Like.destroy_all
 
 u1 = User.create!(username: "Guest", password: 'password', city: 'Seattle, WA')
 
@@ -41,3 +42,5 @@ b12 = Business.create!(city_id: c2.id,name: "Heart Coffee", lat: 47.6677577, lng
 r1 = Review.create!(body: "Hands down the best coffee shop in Seattle.  The 8 oz espresso with milk made my cry one time.  Also highly recommend the deconstructed espresso with milk.  If you're lucky, you might also run into the neighborhood Slate cat!", recommended:true, user_id: u1.id, business_id: b1.id)
 r2 = Review.create!(body: "Yes.  The 8 oz espresso with milk made my cry one time.  Also highly recommend the deconstructed espresso with milk.  If you're lucky, you might also run into the neighborhood Slate cat!", recommended:true, user_id: u1.id, business_id: b1.id)
 r3 = Review.create!(body: "This place is honestly legendary..Except for the fact that it took me a year of trying to come here before I could even get inside the bar.  The lines are hysterical.  There's sort of a cult following for this place.  And I don't like cults.", recommended:true, user_id: u1.id, business_id: b6.id)
+
+l1 = Like.create!(user_id: u1.id, business_id: b1.id)

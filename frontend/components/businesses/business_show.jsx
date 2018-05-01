@@ -1,8 +1,10 @@
+
 import React from 'react';
 import Slider from 'react-slick';
 import BusinessMap from '../maps/business_map';
 import Youtube from './youtube';
 import Reviews from '../reviews/review_container';
+import Likes from '../likes/likes';
 
 class BusinessShow extends React.Component{
   constructor(props){
@@ -26,7 +28,7 @@ class BusinessShow extends React.Component{
 
     //also make a post or delete request for a like
     //also update business.like_count: this might be a patch request to update like_count
-    //or we could just do away with like_count and count the number of nested likes for a given business every time 
+    //or we could just do away with like_count and count the number of nested likes for a given business every time
   }
 
   goBack(){
@@ -91,7 +93,9 @@ class BusinessShow extends React.Component{
           {this.props.business.name}
         </div>
         <div className='business-type'>{this.props.business.businessType}</div>
-        <div className='business-likes'>{this.props.business.like_count} <span className={this.state.liked === true ? 'liked' : 'unliked'} onClick={() => this.changeLikeStatus()}><i className="far fa-heart"></i></span></div>
+        <div className='business-likes'>
+                    <Likes fetchBusiness={() => this.props.fetchSingleBusiness(this.props.match.params.businessId)} business={this.props.business} likes={this.props.business.likes} currentUser={this.props.currentUser}/>
+        </div>
           <div className='back' onClick={this.goBack}>back</div>
 
         <div className='business-show-top'>

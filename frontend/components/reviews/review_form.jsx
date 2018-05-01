@@ -17,11 +17,11 @@ class ReviewForm extends React.Component{
     this.props.createSingleReview(this.state,this.props.businessId)
     this.setState({body:'',recommended:true})
     //fire post request
-    console.log('your parents were eaten ')
+    // console.log('your parents were eaten ')
   }
 
   update(field){
-    console.log(this.state)
+    // console.log(this.state)
     if(field === 'recommended'){
       return(e) => {
         let recommendation = e.target.value === 'unrecommend' ? false : true;
@@ -40,7 +40,7 @@ class ReviewForm extends React.Component{
       <div className='review-form-container'>
         <form onSubmit={this.handleSubmit}>
           <h2>Write a Review</h2>
-      
+
           <textarea value={this.state.body} onChange={this.update('body')} placeholder='Thoughts, ideas, and meanderings...'/>
           <br></br>
             <select onChange={this.update('recommended')}>
