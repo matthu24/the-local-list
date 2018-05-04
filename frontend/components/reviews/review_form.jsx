@@ -7,10 +7,6 @@ class ReviewForm extends React.Component{
     this.state = {body: '', recommended: true}
   }
 
-  componentDidMount(){
-
-
-  }
 
   handleSubmit(e){
     e.preventDefault();

@@ -8,6 +8,7 @@ import CitiesShow from './cities/cities_show_container';
 import BusinessShow from './businesses/business_show_container';
 import LoginContainer from './session/login_container';
 import SignupContainer from './session/signup_container';
+import TopTen from './topten/topten_container';
 
 const App = () => (
   <div>
@@ -20,6 +21,7 @@ const App = () => (
       <Route exact path="/" component={Cities}/>
       <Route exact path = "/cities/:cityId" component={CitiesShow}/>
       <Route exact path = "/businesses/:businessId" component={BusinessShow}/>
+      <Route exact path = "/topten" component={TopTen}/>
     </Switch>
     <Route path="/" component={Footer} />
 

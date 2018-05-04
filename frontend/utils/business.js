@@ -27,3 +27,10 @@ export const fetchBusiness = (id) => {
     url: ` /api/businesses/${id}`
   })
 }
+
+export const fetchBusinesses = () => {
+  return $.ajax({
+    method: 'GET',
+    url: '/api/businesses'
+  })
+}

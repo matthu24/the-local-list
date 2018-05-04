@@ -167,9 +167,6 @@ class BusinessShow extends React.Component{
         </div>
 
       </div>
-
-
-
     )
   }
 }
