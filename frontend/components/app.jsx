@@ -9,6 +9,7 @@ import BusinessShow from './businesses/business_show_container';
 import LoginContainer from './session/login_container';
 import SignupContainer from './session/signup_container';
 import TopTen from './topten/topten_container';
+import FavoritesContainer from './favorites/favorites_container';
 
 const App = () => (
   <div>
@@ -22,6 +23,7 @@ const App = () => (
       <Route exact path = "/cities/:cityId" component={CitiesShow}/>
       <Route exact path = "/businesses/:businessId" component={BusinessShow}/>
       <Route exact path = "/topten" component={TopTen}/>
+      <Route exact path = "/favorites" component={FavoritesContainer} />
     </Switch>
     <Route path="/" component={Footer} />
 
