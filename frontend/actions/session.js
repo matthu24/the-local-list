@@ -27,11 +27,11 @@ export const signup = formUser => dispatch => {
 }
 
 export const login = formUser => dispatch => {
-  postSession(formUser).then(user => dispatch(receiveCurrentUser(user)), err =>(
+  postSession(formUser).then(user => setTimeout(dispatch(receiveCurrentUser(user)),800), err =>(
     dispatch(receiveSessionErrors(err.responseJSON))
   ));
 }
 
 export const logout = () => dispatch => {
-  deleteSession().then(() => dispatch(receiveCurrentUser(null)));
+  deleteSession().then(() => setTimeout(dispatch(receiveCurrentUser(null)),800));
 }
