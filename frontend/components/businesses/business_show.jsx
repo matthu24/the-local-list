@@ -5,11 +5,14 @@ import BusinessMap from '../maps/business_map';
 import Youtube from './youtube';
 import Reviews from '../reviews/review_container';
 import Likes from '../likes/likes';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
+
 
 class BusinessShow extends React.Component{
   constructor(props){
     super(props);
     this.goBack = this.goBack.bind(this);
+    this.createNotification = this.createNotification.bind(this);
     //the liked status should come from the redux state: if the current user has a like object that matches this business id, liked should be true;
   }
 
@@ -17,6 +20,12 @@ class BusinessShow extends React.Component{
     window.scrollTo(0, 0)
     this.props.fetchSingleBusiness(this.props.match.params.businessId)
     this.props.fetchAllCities();
+  }
+
+  createNotification(){
+    return () => {
+      NotificationManager.info('Must be signed in',' ',3000);
+    }
   }
 
   goBack(){
@@ -77,18 +86,19 @@ class BusinessShow extends React.Component{
 
     return(
       <div className='business-show'>
+        <NotificationContainer className='notification'/>
+
         <div className='business-name'>
           {this.props.business.name}
         </div>
         <div className='business-type'>{this.props.business.businessType}</div>
-        <div className='business-likes'>
+        <div className='business-likes' onClick={!this.props.currentUser ? this.createNotification('info') : null}>
             <Likes fetchBusiness={() => this.props.fetchSingleBusiness(this.props.match.params.businessId)}
               business={this.props.business}
               likes={this.props.business.likes}
               currentUser={this.props.currentUser}/>
         </div>
           <div className='back' onClick={this.goBack}>back</div>
-
         <div className='business-show-top'>
           <BusinessMap lat={this.props.business.lat} lng={this.props.business.lng}/>
           <div className='slider-container'>
@@ -159,6 +169,7 @@ class BusinessShow extends React.Component{
                 </div>
               </div>
             </div>
+
 
         </div>
 
