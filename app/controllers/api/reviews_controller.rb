@@ -23,9 +23,6 @@ class Api::ReviewsController < ApplicationController
   end
 
 
-
-
-
   def review_params
     params.require(:review).permit(:body,:recommended)
   end

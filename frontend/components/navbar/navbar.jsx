@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
+import Searches from './searches_container';
 
 class NavBar extends React.Component{
   constructor(props){
@@ -29,7 +30,7 @@ class NavBar extends React.Component{
     return(
       <div className='nav-bar'>
         {navRight}
-        <input className = 'search' placeholder = 'Coffee, Food, or Bar'/>
+        <Searches/>
       </div>
     )
   }
