@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :cities, only: [:create, :show,:index] do
       resources :businesses, only: [:index]
     end
+    resources :searches, only: [:index]
     resources :businesses, only: [:show, :update,:index] do
       resources :reviews, only: [:index, :create, :update]
     end
