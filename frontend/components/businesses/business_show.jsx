@@ -28,6 +28,8 @@ class BusinessShow extends React.Component{
     }
   }
 
+
+
   goBack(){
     this.props.history.goBack();
   }
@@ -87,6 +89,7 @@ class BusinessShow extends React.Component{
     return(
       <div className='business-show'>
         <NotificationContainer className='notification'/>
+
 
         <div className='business-name'>
           {this.props.business.name}

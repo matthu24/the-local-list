@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20180420053735) do
 
   create_table "businesses", force: :cascade do |t|
     t.integer "city_id"
+    t.string "city_name"
     t.string "name"
     t.float "lat"
     t.float "lng"

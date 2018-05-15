@@ -16,7 +16,11 @@ class TopTen extends React.Component{
     // console.log(topTen)
     return(
       <div className='top-ten-container'>
-        {topTen.map((business,id) => <BusinessTopTenItem key={id} likeCount={business[0]} business={business[1]}/>)}
+        <h1>
+          Top Ten Businesses
+
+        </h1>
+        {topTen.map((business,id) => <BusinessTopTenItem key={id} number={id} likeCount={business[0]} business={business[1]}/>)}
       </div>
     )
   }

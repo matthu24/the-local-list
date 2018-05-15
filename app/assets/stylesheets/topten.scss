@@ -1,5 +1,30 @@
 .top-ten-container{
   margin: 50px;
   margin-top: 100px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+
+.top-ten-number{
+  margin-right: 30px;
+}
+
+.business-index-item-right{
+  margin-bottom: 30px;
+}
+
+.topten-index-item{
+  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-bottom:1px solid lightgray;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  // border: 1px solid black;
+  width: 900px;
 
 }

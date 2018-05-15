@@ -15,6 +15,7 @@ class Favorites extends React.Component{
     console.log(businesses)
     return(
       <div className='favorites-container'>
+        
         {
           businesses.map((business,id) => <div key={id}>{business.name}</div>)
         }

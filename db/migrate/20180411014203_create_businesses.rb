@@ -2,6 +2,7 @@ class CreateBusinesses < ActiveRecord::Migration[5.1]
   def change
     create_table :businesses do |t|
       t.integer :city_id
+      t.string :city_name
       t.string :name
       t.float :lat
       t.float :lng
