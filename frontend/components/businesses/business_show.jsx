@@ -11,13 +11,13 @@ import {NotificationContainer, NotificationManager} from 'react-notifications';
 class BusinessShow extends React.Component{
   constructor(props){
     super(props);
-    this.goBack = this.goBack.bind(this);
+    // this.goBack = this.goBack.bind(this);
     this.createNotification = this.createNotification.bind(this);
     //the liked status should come from the redux state: if the current user has a like object that matches this business id, liked should be true;
   }
 
   componentDidMount(){
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     this.props.fetchSingleBusiness(this.props.match.params.businessId)
     this.props.fetchAllCities();
   }
@@ -30,9 +30,9 @@ class BusinessShow extends React.Component{
 
 
 
-  goBack(){
-    this.props.history.goBack();
-  }
+  // goBack(){
+  //   this.props.history.goBack();
+  // }
 
   render(){
     let settings = {
@@ -100,8 +100,8 @@ class BusinessShow extends React.Component{
               business={this.props.business}
               likes={this.props.business.likes}
               currentUser={this.props.currentUser}/>
+            
         </div>
-          <div className='back' onClick={this.goBack}>back</div>
         <div className='business-show-top'>
           <BusinessMap lat={this.props.business.lat} lng={this.props.business.lng}/>
           <div className='slider-container'>

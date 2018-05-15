@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Route } from 'react-router-dom';
 
 
 class SearchDropdown extends React.Component{
@@ -13,7 +14,7 @@ class SearchDropdown extends React.Component{
       <div className='search-list'>
 
           {
-            this.props.results.map((result,id) => <div className='search-item' key={id}>{result.name}</div>)
+            this.props.results.map((result,id) => <Link key={id} to={`/businesses/${result.id}`}><div className='search-item'>{result.name}</div></Link>)
           }
 
       </div>

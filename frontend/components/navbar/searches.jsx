@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchDropdown from './search_dropdown';
+
 class Searches extends React.Component{
   constructor(props){
     super(props);
@@ -18,12 +19,13 @@ class Searches extends React.Component{
   reset(){
     this.setState({search:''});
     this.props.clearResults();
+    window.location.reload();
   }
 
   resetWait(){
     setTimeout(() => {
       this.reset();
-    },100)
+    },200)
   }
 
 
