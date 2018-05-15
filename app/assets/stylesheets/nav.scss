@@ -86,7 +86,7 @@
 }
 
 .search{
-  position: relative;
+  // position: relative;
   width: 35vmin;
   margin-right: 30px;
   height: 30px;
@@ -95,4 +95,13 @@
 
 .search-item{
   background-color: white;
+  padding: 20px;
+  width: 223px;
+  border: 1px solid gray;
+
+}
+
+.search-list{
+  position:absolute;
+  top: 58px;
 }

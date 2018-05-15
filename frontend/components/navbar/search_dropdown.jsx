@@ -10,7 +10,7 @@ class SearchDropdown extends React.Component{
     if(!this.props.results) return null;
     console.log(this.props.results);
     return(
-      <div>
+      <div className='search-list'>
 
           {
             this.props.results.map((result,id) => <div className='search-item' key={id}>{result.name}</div>)

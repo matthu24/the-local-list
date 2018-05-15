@@ -4,6 +4,8 @@ class Searches extends React.Component{
   constructor(props){
     super(props);
     this.handleChange = this.handleChange.bind(this);
+    this.reset = this.reset.bind(this);
+    this.resetWait = this.resetWait.bind(this);
     this.state = {search:''}
   }
 
@@ -13,12 +15,23 @@ class Searches extends React.Component{
     this.props.searchDB(this.state.search)
   }
 
+  reset(){
+    this.setState({search:''});
+    this.props.clearResults();
+  }
+
+  resetWait(){
+    setTimeout(() => {
+      this.reset();
+    },100)
+  }
+
 
   render(){
     return(
       <div>
-        <input value={this.state.search} onChange={this.handleChange} className = 'search' placeholder = 'Coffee, Food, or Bar'/>
-          <SearchDropdown results={this.props.results}/>
+        <input onBlur={this.resetWait} value={this.state.search} onChange={this.handleChange} className = 'search' placeholder = 'Coffee, Food, or Bar'/>
+          <SearchDropdown state={this.state.search} results={this.props.results}/>
 
     </div>
     )
