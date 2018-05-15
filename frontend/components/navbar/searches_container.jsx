@@ -4,7 +4,7 @@ import Searches from './searches';
 import {searchDB} from '../../actions/search';
 
 const mapStateToProps = state => ({
-
+  results: state.entities.searches.searchResults
 });
 
 const mapDispatchToProps = dispatch => ({

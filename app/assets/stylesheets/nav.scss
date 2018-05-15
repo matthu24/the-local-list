@@ -74,21 +74,25 @@
   justify-content: center;
   align-items: center;
 }
+
 .nav-right{
   font-family: 'Josefin Sans', sans-serif;
   display:flex;
   align-items: center;
   flex-direction: row;
-
   font-size: 22px;
   color: black;
 
 }
 
 .search{
-
+  position: relative;
   width: 35vmin;
   margin-right: 30px;
   height: 30px;
   font-size: 20px;
+}
+
+.search-item{
+  background-color: white;
 }

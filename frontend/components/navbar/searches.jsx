@@ -1,7 +1,5 @@
 import React from 'react';
-
-
-
+import SearchDropdown from './search_dropdown';
 class Searches extends React.Component{
   constructor(props){
     super(props);
@@ -20,7 +18,9 @@ class Searches extends React.Component{
     return(
       <div>
         <input value={this.state.search} onChange={this.handleChange} className = 'search' placeholder = 'Coffee, Food, or Bar'/>
-      </div>
+          <SearchDropdown results={this.props.results}/>
+
+    </div>
     )
   }
 }
