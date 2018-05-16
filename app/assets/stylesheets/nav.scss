@@ -97,16 +97,13 @@
   display:flex;
   flex-direction: row;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: white;
   // padding: 20px;
   width: 34.3vmin;
   padding-top: 12px;
   padding-left:10px;
   padding-bottom: 12px;
-  //
-  // border-left: 0.5px solid gray;
-  // border-right: 0.5px solid gray;
-  // border-bottom: 0.5px solid gray;
+
 
   text-align: justify;
 
@@ -114,7 +111,6 @@
 
 
 .search-item:first-child {
-  border-top: 1px solid gray;
 }
 
 .search-item:hover{
@@ -133,6 +129,7 @@
 .search-list{
   position:absolute;
   top: 58px;
+  border: 1px solid gray;
 }
 
 .search-image{
