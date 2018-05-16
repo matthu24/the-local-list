@@ -14,7 +14,13 @@ class SearchDropdown extends React.Component{
       <div className='search-list'>
 
           {
-            this.props.results.map((result,id) => <Link key={id} to={`/businesses/${result.id}`}><div className='search-item'>{result.name}</div></Link>)
+            this.props.results.map((result,id) => <Link className='search-link' key={id} to={`/businesses/${result.id}`}>
+              <div className='search-item'>
+                <img className='search-image' src={result.imageFile1}/>
+                {result.name}
+              </div>
+
+              </Link>)
           }
 
       </div>

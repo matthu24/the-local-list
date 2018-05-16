@@ -35,3 +35,14 @@ textarea{
 .featured-reviewer{
   color:black;
 }
+
+.delete-button{
+  background-color: lightpink;
+  border:none;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.delete-button:hover{
+  cursor: pointer;
+}

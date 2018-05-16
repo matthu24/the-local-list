@@ -69,7 +69,7 @@ class Login extends React.Component {
 
           <br/>
           <button className="login-button" onClick={this.handleSubmit}>Log in</button>
-          <Link to='/signup'className='alt-signup'>Or sign up!</Link>
+          <div>Or <Link to='/signup'className='alt-signup'> sign up!</Link></div>
           <div className="session-errors">{this.renderErrors()}</div>
         </form>
         <div>
