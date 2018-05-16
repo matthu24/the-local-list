@@ -1,11 +1,29 @@
 .login-container, .signup-container{
 
-  margin-top: 200px;
+  margin-top: 300px;
+  bottom: 0 auto;
+  height: 300px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .signup-form, .login-form{
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
+}
+
+.city-outline{
+  margin-top: 80px;
+  width: 800px;
+  height:250px;
+}
+
+.login-button{
+  margin-bottom: 20px;
 }

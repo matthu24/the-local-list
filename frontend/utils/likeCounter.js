@@ -15,5 +15,6 @@ export const likeCounter = (businesses) => {
   //take last five
 
   result = result.sort(function(a,b){return a[0] > b[0]}).reverse().slice(0,5);
+  console.log(result);
   return result;
 }

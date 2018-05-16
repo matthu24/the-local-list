@@ -47,6 +47,9 @@ class Signup extends React.Component{
           <br/>
           <button className="signup-button" onClick={this.handleSubmit}>Sign up</button>
         </form>
+        <div>
+          <img className='city-outline' src="https://s3.us-east-2.amazonaws.com/thelocallist/CityOutline.png"/>
+        </div>
       </div>
     )
   }

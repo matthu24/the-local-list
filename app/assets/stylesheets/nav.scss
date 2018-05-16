@@ -100,8 +100,20 @@
   padding-top: 15px;
   padding-left:10px;
   padding-bottom: 15px;
-  border: 1px solid gray;
+  border-left: 0.5px solid gray;
+  border-right: 0.5px solid gray;
+  border-bottom: 0.5px solid gray;
+
   text-align: justify;
+
+}
+
+.search-item:hover{
+  background-color: #f2f2f2;
+}
+
+.search-item{
+  border-top: 1px solid gray;
 }
 
 .search-list{

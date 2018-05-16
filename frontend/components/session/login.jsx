@@ -72,6 +72,9 @@ class Login extends React.Component {
           <Link to='/signup'className='alt-signup'>Or sign up!</Link>
           <div className="session-errors">{this.renderErrors()}</div>
         </form>
+        <div>
+          <img className='city-outline' src="https://s3.us-east-2.amazonaws.com/thelocallist/CityOutline.png"/>
+        </div>
 
       </div>
     );

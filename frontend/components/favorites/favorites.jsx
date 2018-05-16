@@ -25,7 +25,7 @@ class Favorites extends React.Component{
 
     return(
       <div className='favorites-container'>
-        <h1>Personal Favorites</h1>
+        <h1 className='header1'>Personal Favorites</h1>
         {
           orderedLikes.map((business,id) => <BusinessTopTenItem key={id} number={id} likeCount={business[0]} business={business[1]}/>)
         }

@@ -16,7 +16,7 @@ class TopTen extends React.Component{
     // console.log(topTen)
     return(
       <div className='top-ten-container'>
-        <h1>
+        <h1 className='header1'>
           Top Ten Businesses
 
         </h1>
