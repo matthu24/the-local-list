@@ -22,13 +22,22 @@ class Favorites extends React.Component{
     //sort array of objects by number of likes, then only take the top 5 or whatever
     //returns [likeCount,business]
     let orderedLikes = likeCounter(businesses);
-
+    let content = orderedLikes.length > 0 ? (<div>
+      {
+        orderedLikes.map((business,id) => <BusinessTopTenItem key={id} number={id} likeCount={business[0]} business={business[1]}/>)
+      }
+    </div>) : (
+      <div className='favorites-placeholder'>
+        <div>
+        Nothing here yet..
+        </div>
+        <img className='city-outline' src="https://s3.us-east-2.amazonaws.com/thelocallist/CityOutline.png"/>
+      </div>
+    )
     return(
       <div className='favorites-container'>
         <h1 className='header1'>Personal Favorites</h1>
-        {
-          orderedLikes.map((business,id) => <BusinessTopTenItem key={id} number={id} likeCount={business[0]} business={business[1]}/>)
-        }
+        {content}
       </div>
     )
   }
