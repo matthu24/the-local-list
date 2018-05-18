@@ -11,7 +11,20 @@
   position:fixed;
   width: 100%;
   z-index: 1;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid gray;
+}
+
+.lower-nav{
+  margin-top: 80px;
+  height: 50px;
+  width:100%;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  color:white;
+  align-items: center;
+  margin-bottom: -70px;
+  font-style: italic;
 }
 
 .logo{
@@ -120,7 +133,7 @@
   display:flex;
   flex-direction: row;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: white;
   // padding: 20px;
   width: 34vmin;
   padding-top: 12px;

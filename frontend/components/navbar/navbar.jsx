@@ -27,9 +27,14 @@ class NavBar extends React.Component{
       </div>
     )
     return(
+      <div className='nav-bar-container'>
       <div className='nav-bar'>
         {navRight}
         <Searches/>
+      </div>
+      <div className='lower-nav'>
+        “All journeys have secret destinations of which the traveler is unaware.” -Martin Buber
+      </div>
       </div>
     )
   }
