@@ -16,7 +16,7 @@
 
 .logo{
   height:60px;
-  width: 250px;
+  width: 260px;
   color: black;
   margin-right: 55px;
   margin-left: 40px;
@@ -71,6 +71,12 @@
 
 
 .logout:hover{
+  cursor:pointer;
+  color: black;
+  text-decoration: underline;
+}
+
+.favorites:hover{
   cursor:pointer;
   color: black;
   text-decoration: underline;
@@ -147,7 +153,7 @@
 .search-list{
   position:absolute;
   top: 58px;
-  border: 1px solid gray;
+  border: 1px solid lightgray;
 }
 
 .search-image{

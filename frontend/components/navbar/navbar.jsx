@@ -12,7 +12,6 @@ class NavBar extends React.Component{
       <div className='nav-right'>
         <Link to={'/'}><div ><img className= 'logo' src='https://s3.us-east-2.amazonaws.com/thelocallist/Logo.png'></img></div></Link>
         <Link to={'/topten'}><div className= 'top-10'><i className="fas fa-trophy"></i>Top 10</div></Link>
-        <div className= 'overflow'><i className="fas fa-tint"></i>Overflow</div>
         <Link to={'/favorites'}><div className='favorites'><i className="fas fa-heart"></i>Favorites</div></Link>
         <Link to={'/'}><div className='logout' onClick={() => {this.props.logout()}}><i className="fas fa-key"></i>Logout</div></Link>
           <div className='greeting'><i className="fas fa-handshake"></i>{this.props.currentUser.username}</div>
@@ -20,7 +19,7 @@ class NavBar extends React.Component{
       </div>
     ) : (
       <div className='nav-right'>
-        <Link to={'/'}><div className= 'logo'>The Local List</div></Link>
+        <Link to={'/'}><div ><img className= 'logo' src='https://s3.us-east-2.amazonaws.com/thelocallist/Logo.png'></img></div></Link>
         <Link to={'/topten'}><div className= 'top-10'><i className="fas fa-trophy"></i>Top 10</div></Link>
         <div className= 'overflow'><i className="fas fa-tint"></i>Overflow</div>
         <Link to={'/login'}><div className='login'><i className="fas fa-key"></i>Login</div></Link>
