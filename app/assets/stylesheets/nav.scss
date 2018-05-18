@@ -1,6 +1,7 @@
 .nav-bar{
   top: 0;
-  background: linear-gradient(to right, lightgreen , darkblue);
+  // background: linear-gradient(to right, lightgreen , darkblue);
+  background:white;
   height: 80px;
   margin-bottom: 40px;
   display:flex;
@@ -10,17 +11,19 @@
   position:fixed;
   width: 100%;
   z-index: 1;
+  border-bottom: 1px solid gray;
 }
 
 .logo{
   font-family: 'Josefin Sans', sans-serif;
   font-size: 3vw;
-  color: white;
+  color: black;
   margin-right: 55px;
   margin-left: 40px;
 }
+
 .top-10{
-  color: #f2f2f2;
+  color: #8e8e8e;
   margin-right: 30px;
   display:flex;
   flex-direction: column;
@@ -29,8 +32,14 @@
   text-align: center;
 }
 
+.top-10:hover{
+  cursor:pointer;
+  color: black;
+  text-decoration: underline;
+}
+
 .overflow{
-  color: #f2f2f2;
+  color: #8e8e8e;
 
   margin-right: 30px;
   display:flex;
@@ -40,7 +49,7 @@
 
 }
 .favorites, .logout{
-  color: #f2f2f2;
+  color:  #8e8e8e;
   margin-right: 30px;
 
   display:flex;
@@ -50,7 +59,7 @@
 }
 
 .greeting{
-  color: #f2f2f2;
+  color:  #8e8e8e;
   margin-right: 30px;
 
   display:flex;
@@ -63,10 +72,12 @@
 
 .logout:hover{
   cursor:pointer;
+  color: black;
+  text-decoration: underline;
 }
 
 .login{
-  color: #f2f2f2;
+  color:  #8e8e8e;
   margin-right: 30px;
 
   display:flex;
@@ -75,13 +86,19 @@
   align-items: center;
 }
 
+.login:hover{
+  color: black;
+  text-decoration: underline;
+}
+
 .nav-right{
   font-family: 'Josefin Sans', sans-serif;
+
   display:flex;
   align-items: center;
   flex-direction: row;
-  font-size: 22px;
-  color: black;
+  font-size: 18px;
+  // color: black;
 
 }
 

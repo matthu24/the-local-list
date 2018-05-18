@@ -14,12 +14,14 @@ class Searches extends React.Component{
     this.setState({search: e.target.value})
     //fire api call
     this.props.searchDB(this.state.search)
+
   }
 
   reset(){
     this.setState({search:''});
     this.props.clearResults();
     window.location.reload();
+
   }
 
   resetWait(){
