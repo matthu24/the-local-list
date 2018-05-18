@@ -11,7 +11,7 @@
   align-items: center;
   // margin-left: 15vmin;
   margin-right: 3.5vmin;
-  margin-top: 20px;
+  margin-top: 30px;
   // width: 1200px;
 
 }
@@ -21,9 +21,9 @@
   justify-content: center;
   // justify-content: center;
   // align-items: flex-end;
-  width: 1150px;
+  width: 1120px;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 20px;
 
 }
 
@@ -35,8 +35,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px;
-
+  margin: 5px;
+  margin-bottom: 30px;
 }
 
 .city-name{
@@ -55,9 +55,9 @@
 
 }
 
-.city-image:hover{
-  box-shadow: 5px 10px #888888;
-}
+// .city-image:hover{
+//   border: 1px solid gray;
+// }
 
 .city-tag{
   font-style: italic;
