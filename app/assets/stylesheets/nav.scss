@@ -25,8 +25,12 @@
   align-items: center;
   margin-bottom: -70px;
   font-style: italic;
+}
 
-
+@media(max-width:1200px ){
+  .lower-nav{
+    width: 1200px;
+  }
 }
 
 .logo{
