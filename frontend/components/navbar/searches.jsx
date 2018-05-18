@@ -34,7 +34,7 @@ class Searches extends React.Component{
   render(){
     return(
       <div>
-        <input onBlur={this.resetWait} value={this.state.search} onChange={this.handleChange} className = 'search' placeholder = 'Coffee, Food, or Bar'/>
+        <input onBlur={this.resetWait} value={this.state.search} onChange={this.handleChange} className = 'search' placeholder = 'Coffee, Food, or Bar..'/>
           <SearchDropdown state={this.state.search} results={this.props.results}/>
 
     </div>
