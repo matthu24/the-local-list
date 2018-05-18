@@ -11,12 +11,12 @@
   position:fixed;
   width: 100%;
   z-index: 1;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid lightgray;
 }
 
 .logo{
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 3vw;
+  height:60px;
+  width: 250px;
   color: black;
   margin-right: 55px;
   margin-left: 40px;
@@ -114,12 +114,13 @@
   display:flex;
   flex-direction: row;
   align-items: center;
-  background-color: white;
+  background-color: #f2f2f2;
   // padding: 20px;
-  width: 34.3vmin;
+  width: 34vmin;
   padding-top: 12px;
   padding-left:10px;
   padding-bottom: 12px;
+
 
 
   text-align: justify;

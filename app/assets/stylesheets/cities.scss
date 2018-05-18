@@ -35,12 +35,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  // height: 42vmin;
-  // width: 42vmin;
   margin: 20px;
 
-  // background-color: #f2f2f2;
 }
 
 .city-name{
@@ -53,13 +49,14 @@
   height: 250px;
   width: 310px;
   border-radius: 10px;
-  // height: 33vmin;
-  // width: 42vmin;
-  // border: 6px solid lightblue;
   border-bottom: none;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
+}
+
+.city-image:hover{
+  box-shadow: 25px 30px;
 }
 
 .city-tag{

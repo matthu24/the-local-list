@@ -10,7 +10,7 @@ class NavBar extends React.Component{
   render(){
     let navRight = this.props.currentUser ? (
       <div className='nav-right'>
-        <Link to={'/'}><div className= 'logo'>The Local List</div></Link>
+        <Link to={'/'}><div ><img className= 'logo' src='https://s3.us-east-2.amazonaws.com/thelocallist/Logo.png'></img></div></Link>
         <Link to={'/topten'}><div className= 'top-10'><i className="fas fa-trophy"></i>Top 10</div></Link>
         <div className= 'overflow'><i className="fas fa-tint"></i>Overflow</div>
         <Link to={'/favorites'}><div className='favorites'><i className="fas fa-heart"></i>Favorites</div></Link>
