@@ -193,3 +193,26 @@ h3{
   height: 400px;
   width: 600px;
 }
+
+.notification-container{
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup{
+  height: 50px;
+  width: 280px;
+  background-color: lightblue;
+  z-index: 2;
+  margin-top: 15px;
+  top: -200px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  color: white;
+
+  transition: top 1s;
+}

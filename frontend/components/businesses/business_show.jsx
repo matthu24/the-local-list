@@ -5,6 +5,7 @@ import BusinessMap from '../maps/business_map';
 import Youtube from './youtube';
 import Reviews from '../reviews/review_container';
 import Likes from '../likes/likes';
+import Popup from '../notification/notification';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 
@@ -12,6 +13,7 @@ class BusinessShow extends React.Component{
   constructor(props){
     super(props);
     // this.goBack = this.goBack.bind(this);
+    this.openPopup = this.openPopup.bind(this);
     this.createNotification = this.createNotification.bind(this);
     //the liked status should come from the redux state: if the current user has a like object that matches this business id, liked should be true;
   }
@@ -25,6 +27,16 @@ class BusinessShow extends React.Component{
   createNotification(){
     return () => {
       NotificationManager.info('Must be signed in',' ',3000);
+    }
+  }
+
+  openPopup(){
+    return()=>{
+      document.querySelector('.popup').style.top = '0'
+      setTimeout(function(){
+        document.querySelector('.popup').style.top = '-100px'
+
+      },3000)
     }
   }
 
@@ -86,8 +98,11 @@ class BusinessShow extends React.Component{
     let image7 = this.props.business.imageFile7;
     let image8 = this.props.business.imageFile8;
 
+    //this.createNotification('info') to trigger the react-notification component instead of this.openPopup()
+
     return(
       <div className='business-show'>
+        <Popup/>
         <NotificationContainer className='notification'/>
 
 
@@ -95,12 +110,12 @@ class BusinessShow extends React.Component{
           {this.props.business.name}
         </div>
         <div className='business-type'>{this.props.business.businessType}</div>
-        <div className='business-likes' onClick={!this.props.currentUser ? this.createNotification('info') : null}>
+        <div className='business-likes' onClick={!this.props.currentUser ? this.openPopup() : null}>
             <Likes fetchBusiness={() => this.props.fetchSingleBusiness(this.props.match.params.businessId)}
               business={this.props.business}
               likes={this.props.business.likes}
               currentUser={this.props.currentUser}/>
-            
+
         </div>
         <div className='business-show-top'>
           <BusinessMap lat={this.props.business.lat} lng={this.props.business.lng}/>
