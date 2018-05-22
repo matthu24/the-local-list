@@ -57,6 +57,22 @@
   text-decoration: underline;
 }
 
+.demo-login{
+  color: #8e8e8e;
+  margin-right: 30px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.demo-login:hover{
+  cursor:pointer;
+  color: black;
+  text-decoration: underline;
+}
+
 .overflow{
   color: #8e8e8e;
 

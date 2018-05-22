@@ -6,7 +6,14 @@ import Searches from './searches_container';
 class NavBar extends React.Component{
   constructor(props){
     super(props)
+    this.demoLogin = this.demoLogin.bind(this);
   }
+
+  demoLogin(){
+    console.log('hey')
+    this.props.login({username: "Guest", password: 'password'})
+  }
+
   render(){
     let navRight = this.props.currentUser ? (
       <div className='nav-right'>
@@ -21,7 +28,7 @@ class NavBar extends React.Component{
       <div className='nav-right'>
         <Link to={'/'}><div ><img className= 'logo' src='https://s3.us-east-2.amazonaws.com/thelocallist/Logo2.png'></img></div></Link>
         <Link to={'/topten'}><div className= 'top-10'><i className="fas fa-trophy"></i>Top 10</div></Link>
-        <div className= 'overflow'><i className="fas fa-tint"></i>Overflow</div>
+        <div onClick = {() => {this.demoLogin()}} className= 'demo-login'><i className="fas fa-tint"></i>Demo Login</div>
         <Link to={'/login'}><div className='login'><i className="fas fa-key"></i>Login</div></Link>
 
       </div>
