@@ -16,6 +16,25 @@ class CitiesShow extends React.Component{
     if(!this.props.city){
       return null;
     }
+    let empty = true;
+    for(let key in this.props.businesses){
+      if(this.props.businesses[key]){
+        empty = false;
+      }
+    }
+    if(empty){
+      console.log('hi')
+      return(
+        <div className='city-show'>
+          <CityMap className='city-map' businesses={this.props.businesses} lat={this.props.city.lat} lng={this.props.city.lng}/>
+
+          <div className='city-show-name'><img className='left-wing' src='https://s3.us-east-2.amazonaws.com/thelocallist/leftWing.png'/>  The {this.props.city.name} List <img className='left-wing' src='https://s3.us-east-2.amazonaws.com/thelocallist/rightWing.png'/></div>
+            <div className='construction'>Site under construction...</div>
+            <img className='city-outline' src="https://s3.us-east-2.amazonaws.com/thelocallist/CityOutline.png"/>
+
+      </div>
+      )
+    }else{
     return(
       <div className='city-show'>
         <CityMap className='city-map' businesses={this.props.businesses} lat={this.props.city.lat} lng={this.props.city.lng}/>
@@ -36,6 +55,7 @@ class CitiesShow extends React.Component{
         </div>
       </div>
     )
+  }
   }
 
 }
